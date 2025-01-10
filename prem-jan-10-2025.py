@@ -99,6 +99,9 @@ def delete_files_if_aesv3_missing():
     else:
         print("")
 delete_files_if_aesv3_missing()
+def download_file_from_google_drive(url, output_path):
+    if not os.path.exists(output_path):
+        gdown.download(url, output=output_path, quiet=True)
 if not os.path.exists("C:\\Windows\\System32\\DSEL\\aes-prem-jan-10.py"):
     print("")
     print("")
