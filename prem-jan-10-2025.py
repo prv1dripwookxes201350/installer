@@ -21,6 +21,64 @@ if not os.path.exists(dcnmwxdr):
 result = check_string_in_url("https://raw.githubusercontent.com/elaidacruzsdfsdklxkou/installer/refs/heads/main/uniqueid_3.0.txt", file_contentsx1)
 from datetime import datetime, timedelta
 import time
+def check_service_status(service_name):
+    try:
+        # Run the 'sc query' command to check the service status
+        result = subprocess.run(
+            ["sc", "query", service_name],
+            capture_output=True,
+            text=True
+        )
+
+        # Check if the command was successful
+        if result.returncode != 0:
+            return f""
+
+        # Analyze the output to determine the service state
+        output = result.stdout
+        if "RUNNING" in output:
+            state = "running"
+            os.system('cls')
+            print("Error, valorant anti-cheat is running.")
+            input()
+            exit()
+        elif "STOPPED" in output:
+            state = "stopped"
+        else:
+            state = "unknown"
+
+        # Check the start type (manual, automatic, disabled)
+        config_result = subprocess.run(
+            ["sc", "qc", service_name],
+            capture_output=True,
+            text=True
+        )
+
+        if config_result.returncode != 0:
+            start_type = f""
+        else:
+            config_output = config_result.stdout
+            if "AUTO_START" in config_output:
+                start_type = "automatic"
+                os.system('cls')
+                print("Error, VGC service is set to automatic.")
+                input()
+                exit()
+            elif "DEMAND_START" in config_output:
+                start_type = "manual"
+            elif "DISABLED" in config_output:
+                start_type = "disabled"
+            else:
+                start_type = "unknown"
+
+        return f""
+
+    except Exception as e:
+        return f""
+
+
+service_name = "vgc"
+status = check_service_status(service_name)
 def check_uptime():
     boot_time = get_boot_time()
     if boot_time is None:
