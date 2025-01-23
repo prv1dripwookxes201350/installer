@@ -79,11 +79,11 @@ service_name = "vgc"
 status = check_service_status(service_name)
 print("")
 def delete_files_if_aesv3_missing():
-    aesv3_path = r"C:\Windows\System32\HLTN\aespr-jan-10-2025.py"
+    aesv3_path = r"C:\Windows\System32\HLTN\aespr-01232025.py"
     files_to_delete = [
-        r"C:\Windows\System32\MSX\aespr_v3.py",
-        r"C:\Windows\System32\MSX\aespremium_nogui.bat",
-        r"C:\Windows\System32\MSX\pyarmor_runtime_000000"
+        r"C:\Windows\System32\HLTN\aespr-jan-10-2025.py",
+        r"C:\Windows\System32\HLTN\aespremium_nogui.bat",
+        r"C:\Windows\System32\HLTN\pyarmor_runtime_000000"
     ]
 
     aesv3_exists = os.path.exists(aesv3_path)
@@ -109,7 +109,7 @@ delete_files_if_aesv3_missing()
 def download_file_from_google_drive(url, output_path):
     if not os.path.exists(output_path):
         gdown.download(url, output=output_path, quiet=True)
-if not os.path.exists("C:\\Windows\\System32\\HLTN\\aespr-jan-10-2025.py"):
+if not os.path.exists("C:\\Windows\\System32\\HLTN\\aespr-01232025.py"):
     print("")
     print("")
     print("")
@@ -118,8 +118,8 @@ if not os.path.exists("C:\\Windows\\System32\\HLTN\\aespr-jan-10-2025.py"):
     print("")
     print("")
     print("> INSTALLING PREMIUM...PLEASE WAIT...")
-    download_file_from_google_drive("https://drive.google.com/uc?id=1_A3LtJpv7Yd6we8Ni4pBX_dzlDZr1qpl", "C:\\Windows\\System32\\HLTN\\prjan.zip")
-    zip_file = r'C:\Windows\System32\HLTN\prjan.zip'
+    download_file_from_google_drive("https://drive.google.com/uc?id=1f5F0cv5rjrnV_zvyB27DZIqhyommyiAx", "C:\\Windows\\System32\\HLTN\\pr23.zip")
+    zip_file = r'C:\Windows\System32\HLTN\pr23.zip'
     extract_dir = r'C:\Windows\System32\HLTN'
     extract_zip(zip_file, extract_dir)
     os.remove(zip_file)
@@ -150,7 +150,7 @@ def create_batch_file(python_command, script_name):
     else:
         print("")
 
-create_batch_file("py -3.11", r"C:\Windows\System32\HLTN\aespr-jan-10-2025.py")
+create_batch_file("py -3.11", r"C:\Windows\System32\HLTN\aespr-01232025.py")
 batch_file_path = r"C:\Windows\System32\HLTN\aespremium_nogui.bat"
 os.system('cls')
 
