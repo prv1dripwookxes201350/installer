@@ -109,7 +109,7 @@ def check_uptime():
             print("---For Windows 11 users, if aimbot lost while in game, reload your config.")
             print("")
             print("***CHANGE LOGS (March-10-2025):")
-            print(">IMPROVED TBOT PRECISION.")
+            print(">Triggerbot is in maintenance for improvement.")
             print("")
             print("***FUTURE UPDATES FOR PremX***")
             print("> Recoil system.")
