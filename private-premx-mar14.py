@@ -102,15 +102,13 @@ def check_uptime():
             print("")
             print("")
             print("***ABOUT PremX***")
-            print("---To ensure 99% safety of premium cheat, it must encrypt all runtime data.")
+            print("---To ensure 99% safety of PremX cheat, it must encrypt all runtime data.")
             print("---Please be patient, it will take a few minutes.")
             print("---No need to restart PC when switching to another account.")
             print("---For Windows 11 users, premx might not be consistent and you might need to do a restart before it works.")
             print("")
-            print("***CHANGE LOGS (March-10-2025):")
-            print("> Removed some features of the cheat such as triggerbt and changing settings while in game.")
-            print("")
-            print("")
+            print("***CHANGE LOGS (March-16-2025):")
+            print("> Removed some features of the cheat.")
             print("/////////////////////////////////////////////////////////////////////////////////////////////")
             print("<Developer: anonymous_kl>")
             minutes, seconds = divmod(int(time_remaining.total_seconds()), 60)
@@ -119,7 +117,7 @@ def check_uptime():
             time.sleep(1)
             current_time = datetime.now()
             uptime = current_time - boot_time
-            time_remaining = timedelta(minutes=5) - uptime
+            time_remaining = timedelta(minutes=3) - uptime
 
         print("Completed encryption.")        
 check_uptime()
