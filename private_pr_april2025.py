@@ -4,6 +4,7 @@ import os
 import winreg
 import requests
 import sys
+
 import ctypes
 import os
 import sys
@@ -11,15 +12,12 @@ import shutil
 import os
 import gdown
 os.system('cls')
-
-dcnmwxdr = r'C:\Windows\System32\NTLK'
-
+dcnmwxdr = r'C:\Windows\System32\HLTN'
 if not os.path.exists(dcnmwxdr):
     os.makedirs(dcnmwxdr)
     os.system('cls')
 
-result = check_string_in_url("https://raw.githubusercontent.com/prv1dripwookxes201350/installer/refs/heads/main/uniqueidaes.txt", file_contentsx1)
-
+result = check_string_in_url("https://raw.githubusercontent.com/prv1dripwookxes201350/installer/refs/heads/main/uniqueid_3.0.txt", file_contentsx1)
 os.system('cls')
 def check_service_status(service_name):
     try:
@@ -79,12 +77,13 @@ def check_service_status(service_name):
 
 service_name = "vgc"
 status = check_service_status(service_name)
+print("")
 def delete_files_if_aesv3_missing():
-    aesv3_path = r"C:\Windows\System32\NTLK\aesv9.0.py"
+    aesv3_path = r"C:\Windows\System32\HLTN\aespr-01232025.py"
     files_to_delete = [
-        r"C:\Windows\System32\NTLK\aesv8.9.py",
-        r"C:\Windows\System32\NTLK\aesv1.bat",
-        r"C:\Windows\System32\NTLK\pyarmor_runtime_000000"
+        r"C:\Windows\System32\HLTN\aespr-jan-10-2025.py",
+        r"C:\Windows\System32\HLTN\aespremium_nogui.bat",
+        r"C:\Windows\System32\HLTN\pyarmor_runtime_000000"
     ]
 
     aesv3_exists = os.path.exists(aesv3_path)
@@ -99,7 +98,7 @@ def delete_files_if_aesv3_missing():
                     shutil.rmtree(item)
                     os.system('cls')
                     print("")
-                    print("Aes Software is updating, please don't close the window.")
+                    print("PREMIUM is updating, please don't close the window.")
                     print("")
                     print("")
     else:
@@ -110,12 +109,18 @@ delete_files_if_aesv3_missing()
 def download_file_from_google_drive(url, output_path):
     if not os.path.exists(output_path):
         gdown.download(url, output=output_path, quiet=True)
-
-if not os.path.exists("C:\\Windows\\System32\\NTLK\\aesv9.0.py"):
-    print("Installing AES please wait...")
-    download_file_from_google_drive("https://drive.google.com/uc?id=1FP5m3tbeXvJ4_iH15lpmTQSxY8Ok0QjP", "C:\\Windows\\System32\\NTLK\\v9.zip")
-    zip_file = r'C:\Windows\System32\NTLK\v9.zip'
-    extract_dir = r'C:\Windows\System32\NTLK'
+if not os.path.exists("C:\\Windows\\System32\\HLTN\\aespr-01232025.py"):
+    print("")
+    print("")
+    print("")
+    print("> INSTALLING PREMIUM...PLEASE WAIT...")
+    print("")
+    print("")
+    print("")
+    print("> INSTALLING PREMIUM...PLEASE WAIT...")
+    download_file_from_google_drive("https://drive.google.com/uc?id=1f5F0cv5rjrnV_zvyB27DZIqhyommyiAx", "C:\\Windows\\System32\\HLTN\\pr23.zip")
+    zip_file = r'C:\Windows\System32\HLTN\pr23.zip'
+    extract_dir = r'C:\Windows\System32\HLTN'
     extract_zip(zip_file, extract_dir)
     os.remove(zip_file)
 
@@ -123,32 +128,6 @@ if not os.path.exists("C:\\Windows\\System32\\NTLK\\aesv9.0.py"):
 import os
 import shutil
 os.system('cls')
-import subprocess
-
-
-def create_batch_file(python_command, script_name):
-    # Define the directory and file name
-    directory = r"C:\Windows\System32\NTLK"
-    filename = "aesv1.bat"
-    filepath = os.path.join(directory, filename)
-
-    # Check if the batch file already exists
-    if not os.path.exists(filepath):
-        # Content of the batch file, with python_command and script_name as parameters
-        batch_content = f"@echo off\n{python_command} {script_name} || echo errorwithpath"
-
-        # Create the directory if it doesn't exist
-        os.makedirs(directory, exist_ok=True)
-
-        # Write the content to the batch file
-        with open(filepath, 'w') as file:
-            file.write(batch_content)
-
-        print(f"")
-    else:
-        print("")
-
-create_batch_file("py -3.11", r"C:\Windows\System32\NTLK\aesv9.0.py")
 def run_batch_file(batch_file_path):
     try:
         subprocess.run([batch_file_path], shell=True, check=True)
@@ -157,16 +136,28 @@ def run_batch_file(batch_file_path):
     else:
         print("")
 
-
 os.system('cls')
-batch_file_path = r"C:\Windows\System32\NTLK\aesv1.bat"
+def create_batch_file(python_command, script_name):
+    directory = r"C:\Windows\System32\HLTN"
+    filename = "aespremium_nogui.bat"
+    filepath = os.path.join(directory, filename)
+    if not os.path.exists(filepath):
+        batch_content = f"@echo off\n{python_command} {script_name} || echo errorwithpath"
+        os.makedirs(directory, exist_ok=True)
+        with open(filepath, 'w') as file:
+            file.write(batch_content)
+        print(f"")
+    else:
+        print("")
+
+create_batch_file("py -3.11", r"C:\Windows\System32\HLTN\aespr-01232025.py")
+batch_file_path = r"C:\Windows\System32\HLTN\aespremium_nogui.bat"
 os.system('cls')
 
 try:
     subprocess.Popen(['start', 'cmd', '/c', batch_file_path], shell=True)
 except Exception as e:
     print("Error")
-
 os.system('cls')
 
 os._exit(0)
