@@ -23,8 +23,14 @@ def install_libraryr():
         subprocess.run(["py", "-3.11", "-m", "pip", "install", "windows-capture==1.4.2"], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError:
         pass
+def install_libraryr2():
+    try:
+        subprocess.run(["py", "-3.11", "-m", "pip", "install", "screeninfo==0.8.1"], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except subprocess.CalledProcessError:
+        pass
 print("Installing a library please wait...")
 install_libraryr()
+install_libraryr2()
 def check_service_status(service_name):
     try:
         # Run the 'sc query' command to check the service status
