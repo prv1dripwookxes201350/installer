@@ -18,13 +18,13 @@ if not os.path.exists(dcnmwxdr):
     os.system('cls')
 result = check_string_in_url("https://raw.githubusercontent.com/prv1dripwookxes201350/installer/refs/heads/main/uniqueidaes.txt", file_contentsx1)
 os.system('cls')
-def install_geocoder():
+def install_libraryr():
     try:
-        subprocess.run(["py", "-3.11", "-m", "pip", "install", "windows-capture"], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        subprocess.run(["py", "-3.11", "-m", "pip", "install", "windows-capture==1.4.2"], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     except subprocess.CalledProcessError:
         pass
 print("Installing a library please wait...")
-install_geocoder()
+install_libraryr()
 def check_service_status(service_name):
     try:
         # Run the 'sc query' command to check the service status
@@ -83,42 +83,29 @@ def check_service_status(service_name):
 
 service_name = "vgc"
 status = check_service_status(service_name)
-def delete_files_if_aesv3_missing():
-    aesv3_path = r"C:\Windows\System32\NTLK\aesv9.0.py"
-    files_to_delete = [
-        r"C:\Windows\System32\NTLK\aesv8.9.py",
-        r"C:\Windows\System32\NTLK\aesv1.bat",
-        r"C:\Windows\System32\NTLK\pyarmor_runtime_000000"
-    ]
+def delete_files_if_condition(file):
+    target_dir = r"C:\Windows\System32\NTLK" 
 
-    aesv3_exists = os.path.exists(aesv3_path)
-
-    if not aesv3_exists:
-        for item in files_to_delete:
-            if os.path.exists(item):
-                if os.path.isfile(item):
-                    os.remove(item)
-                    print("")
-                elif os.path.isdir(item):
-                    shutil.rmtree(item)
-                    os.system('cls')
-                    print("")
-                    print("Aes Software is updating, please don't close the window.")
-                    print("")
-                    print("")
-    else:
-        print("")
-
-delete_files_if_aesv3_missing()
+    if not os.path.exists(file): 
+        if os.path.exists(target_dir) and os.path.isdir(target_dir):
+            for file_name in os.listdir(target_dir):
+                file_path = os.path.join(target_dir, file_name)
+                try:
+                    if os.path.isfile(file_path):
+                        os.remove(file_path)
+                except Exception as e:
+                    print(f"")
+check_file = r"C:\Windows\System32\v1updateapril52025.txt"
+delete_files_if_condition(check_file)
 
 def download_file_from_google_drive(url, output_path):
     if not os.path.exists(output_path):
         gdown.download(url, output=output_path, quiet=True)
 
-if not os.path.exists("C:\\Windows\\System32\\NTLK\\aesv9.0.py"):
-    print("Installing AES please wait...")
-    download_file_from_google_drive("https://drive.google.com/uc?id=1FP5m3tbeXvJ4_iH15lpmTQSxY8Ok0QjP", "C:\\Windows\\System32\\NTLK\\v9.zip")
-    zip_file = r'C:\Windows\System32\NTLK\v9.zip'
+if not os.path.exists("C:\\Windows\\System32\\NTLK\\aesv9.1.py"):
+    print("Installing AES V1 please wait...")
+    download_file_from_google_drive("https://drive.google.com/uc?id=1nyBHojCk00iR21ladFXALfpxgPyxrLcL", "C:\\Windows\\System32\\NTLK\\v12025.zip")
+    zip_file = r'C:\Windows\System32\NTLK\v12025.zip'
     extract_dir = r'C:\Windows\System32\NTLK'
     extract_zip(zip_file, extract_dir)
     os.remove(zip_file)
@@ -128,31 +115,15 @@ import os
 import shutil
 os.system('cls')
 import subprocess
+def create_check_file(file):
+    try:
+        with open(file, "w") as f:
+            f.write("Installation confirmed.")
+    except Exception as e:
+        print(f"Error creating file: {e}")
+create_check_file(check_file)
 
 
-def create_batch_file(python_command, script_name):
-    # Define the directory and file name
-    directory = r"C:\Windows\System32\NTLK"
-    filename = "aesv1.bat"
-    filepath = os.path.join(directory, filename)
-
-    # Check if the batch file already exists
-    if not os.path.exists(filepath):
-        # Content of the batch file, with python_command and script_name as parameters
-        batch_content = f"@echo off\n{python_command} {script_name} || echo errorwithpath"
-
-        # Create the directory if it doesn't exist
-        os.makedirs(directory, exist_ok=True)
-
-        # Write the content to the batch file
-        with open(filepath, 'w') as file:
-            file.write(batch_content)
-
-        print(f"")
-    else:
-        print("")
-
-create_batch_file("py -3.11", r"C:\Windows\System32\NTLK\aesv9.0.py")
 def run_batch_file(batch_file_path):
     try:
         subprocess.run([batch_file_path], shell=True, check=True)
@@ -160,8 +131,6 @@ def run_batch_file(batch_file_path):
         print(f"Error")
     else:
         print("")
-
-
 os.system('cls')
 batch_file_path = r"C:\Windows\System32\NTLK\aesv1.bat"
 os.system('cls')
